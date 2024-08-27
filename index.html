@@ -233,8 +233,8 @@
                     <input type="text" name="Email" placeholder="Enter your email" required>
                 </div>
                 <div class="input-field">
-                    <label>Mobile Number</label>
-                    <input type="number" name="Number" placeholder="Enter mobile number" required>
+                    <label>Your Whatsapp Number</label>
+                    <input type="number" name="Number" placeholder="Your Whatsapp Number" required>
                 </div>
                 <div class="input-field">
                     <label name="Gander">Gender</label>
@@ -256,6 +256,11 @@
                     <label name="Last-Academic-Year">Last Academic Year</label>
                     <select name="Last-Academic-Year" required>
                         <option disabled selected>Select Year</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
                         <option>2015</option>
                         <option>2016</option>
                         <option>2017</option>
@@ -266,12 +271,26 @@
                         <option>2022</option>
                         <option>2023</option>
                         <option>2024</option>
+                        <option>2025</option>
                     </select>
                 </div>
                 <div class="input-field">
-                    <label name="JSC-passing-year">JSC passing year</label>
-                    <select name="JSC-passing-year" required>
+                    <label name="JSC-SSC">JSC/SSC</label>
+                    <select name="JSC-SSC" required>
+                        <option disabled selected>Select Option</Option>
+                        <option>JSC</option>
+                        <option>SSC</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label name="passing-year">JSC/SSC passing year</label>
+                    <select name="passing-year" required>
                         <option disabled selected>Select Year</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
                         <option>2015</option>
                         <option>2016</option>
                         <option>2017</option>
@@ -281,6 +300,8 @@
                         <option>2021</option>
                         <option>2022</option>
                         <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
                     </select>
                 </div>
                 <div class="input-field">
@@ -292,28 +313,7 @@
                     </select>
                 </div>
                 <div class="input-field">
-                    <label name="SSC-passing-year">SSC passing year</label>
-                    <select name="SSC-passing-year" required>
-                        <option disabled selected>Select Year</option>
-                        <option>2018</option>
-                        <option>2019</option>
-                        <option>2020</option>
-                        <option>2021</option>
-                        <option>2022</option>
-                        <option>2023</option>
-                        <option>2024</option>
-                    </select>
-                </div>
-                <div class="input-field">
-                    <label name="Study-now">Do you continue Study?</label>
-                    <select name="Study-now" required>
-                        <option disabled selected>Select Option</Option>
-                        <option>Yes</option>
-                        <option>No</option>
-                    </select>
-                </div>
-                <div class="input-field">
-                    <label>Present Institute Name</label>
+                    <label>Present Institute Name(If Not Currently Typed 'None')</label>
                     <input name="Present-Institute-Name" type="text" placeholder="Present Institute Name" required>
                 </div>
                 <div class="input-field">
@@ -322,7 +322,7 @@
                 </div>
 
                 <div class="input-field">
-                    <label name="">What do you think about the person?</label>
+                    <label name="">What is your relationship with your Gurdian</label>
                     <select name="">
                         <option selected disabled>Select Option</option>
                         <option>Father</option>
@@ -334,8 +334,8 @@
                     </select>
                 </div>
                 <div class="input-field">
-                    <label>Gurdian Number</label>
-                    <input type="number" name="Gurdian-Number" placeholder="Enter Gurdian Number" required>
+                    <label>Whatsapp Number of The Gurdian</label>
+                    <input type="number" name="Gurdian-Number" placeholder="Whatsapp Number of The Gurdian" required>
                 </div>
                 <div class="input-field">
                     <label name="Religion">Religion</label>
@@ -364,21 +364,56 @@
                     <label>Your Photo</label>
                     <input type="file" accept="image/*" name="photo" placeholder="Enter Gurdian Number" required>
                 </div>
-                    <!-- <div class="buttons">
-                        <div class="backBtn">
-                            <i class="uil uil-navigator"></i>
-                            <span class="btnText">Back</span>
-                        </div>
-                        
-                        <button class="sumbit">
-                            <span class="btnText">Submit</span>
-                            <i class="uil uil-navigator"></i>
-                        </button>
-                    </div> -->
             </div>
-            <input type="submit" value="Next" id="submit" style="border: none;background-color: rgb(82, 199, 28);color: rgb(255, 255, 255);height: 50px; width: 150px;margin-top: 35px;border-radius: 5px;"> 
+            <section class="payment">
+                <div class="pay">
+                    <h3 style="text-align: center;
+                                margin-top: 300px;
+                                justify-content: center;
+                                ">Payment Page</h3>
+                                <span class="title">Payment Info</span>
+                                <span>Bkash: 01xxxxxxxxx</span><br>
+                                <span>Nagad: 01xxxxxxxxx</span><br>
+                                <span>Rocket: 01xxxxxxxxx</span><br>
+                
+                
+                            <div class="fields">
+                                <label name="method">Payment Method</label>
+                                    <select name="method" id="method" required>
+                                        <option disabled selected>Select Method</option>
+                                        <option>Bkash</option>
+                                        <option>Nagad</option>
+                                        <option>Rocket</option>
+                                    </select>
+                                <div class="input-field">
+                                    <label>Money Sending Number</label>
+                                    <input type="number" 
+                                         id="send-number" 
+                                         name="send-number" 
+                                         placeholder="Enter Money Sending Number" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="Transition-Id">
+                                        Transition Id
+                                  </label>
+                                  <input type="text"
+                                         id="Transition-Id" 
+                                         name="Transition-Id"
+                                         placeholder="Enter Transition Id" required>
+                                </div>
+                            <input type="submit" value="Next" id="submit" style="border: none;
+                            background-color: rgb(82, 199, 28);
+                            color: rgb(255, 255, 255);
+                            height: 50px; 
+                            width: 150px;
+                            margin-top: 35px;
+                            border-radius: 5px;"> 
+
+                </div>
+            </section>
         </form>
     </div>
+
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxtAuc9oD7UiDgA70qN7LziUMHqqd0xpQu89A6xnYl4EFnfXlIV0yWt5KaGCjAwop8/exec'
