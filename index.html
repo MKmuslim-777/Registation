@@ -322,8 +322,8 @@
                 </div>
 
                 <div class="input-field">
-                    <label name="">What is your relationship with your Gurdian</label>
-                    <select name="">
+                    <label name="Gurdian">What is your relationship with your Gurdian</label>
+                    <select name="Gurdian">
                         <option selected disabled>Select Option</option>
                         <option>Father</option>
                         <option>Mother</option>
@@ -402,7 +402,7 @@
                                 </div>
                                 <div>
                                     <label>Payment Successfully Screenshot Submit</label>
-                                    <input type="file" accept="image/*" name="photo" placeholder="" required>
+                                    <input type="file" accept="image/*" name="SS" placeholder="" required>
                                 </div>
                             <input type="submit" value="Submit" id="submit" style="border: none;
                             background-color: rgb(82, 199, 28);
@@ -417,17 +417,20 @@
 
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxtAuc9oD7UiDgA70qN7LziUMHqqd0xpQu89A6xnYl4EFnfXlIV0yWt5KaGCjAwop8/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxMSEtCKIHciCssNUbob2aurn9mOH9d8K3jNQk5oydJxKW1QrnBtAVWgdX0rg4AmSpv/exec'
 
-        const form = document.forms['contact-form']
 
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert("Thank you! your form is submitted successfully." ))
-        .then(() => { window.location.reload(); })
-        .catch(error => console.error('Error!', error.message))
-        })
+const form = document.forms['contact-form']
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+
     </script>
 </body>
 </html>
